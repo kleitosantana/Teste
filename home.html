@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <style>
+    body { margin:0; font-family: Arial; background:#0d0d0d; color:white; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh;}
+    button { padding:12px 25px; margin:10px; border:none; border-radius:8px; background:#ff0000; color:white; font-weight:bold; cursor:pointer; transition:0.3s;}
+    button:hover { background:#cc0000; }
+  </style>
+</head>
+<body>
+  <h2>Bem-vindo(a) à Home!</h2>
+
+  <button onclick="abrirFreeFire()">Abrir Free Fire</button>
+  <button onclick="mostrarAlerta()">Teste Função</button>
+
+  <script>
+    function abrirFreeFire() {
+      if(window.Android && Android.openApp) {
+        Android.openApp("com.dts.freefireth");
+      } else {
+        alert("Função nativa não disponível!");
+      }
+    }
+
+    function mostrarAlerta() {
+      alert("Função de teste funcionando!");
+    }
+  </script>
+</body>
+</html>
